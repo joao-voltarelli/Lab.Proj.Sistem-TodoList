@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  due: 2020-10-16
+  done: false
+
+two:
+  title: MyString
+  description: MyString
+  due: 2020-10-16
+  done: false

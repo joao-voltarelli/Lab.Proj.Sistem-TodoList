@@ -1,0 +1,30 @@
+<h1> Todo List <h1>
+
+<table>
+    <thead>
+        <tr>
+            <th><h4>Title<h4><th>
+            <th><h4>Description<h4><th>
+            <th><h4>Due<h4><th>
+            <th><h4>Done<h4><th>
+        </tr>
+    </thead>
+
+    <tbody>
+    <% @tasks.each do |task| %>
+        <tr>
+            <td><%= task.title %></td>
+            <td><%= task.description %></td>
+            <td><%= task.due %></td>
+            <td><%= task.done %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>
+
+<h3>
+<%= link_to 'Criar tarefa' %>
+<%= link_to 'Alterar tarefa' %>
+<%= link_to 'Remover tarefa' %>
+<%= link_to 'Consultar tarefa' %>
+<h3>
