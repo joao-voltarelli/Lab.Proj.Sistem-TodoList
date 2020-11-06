@@ -1,30 +1,27 @@
 <h1> Todo List <h1>
 
-<table>
-    <thead>
+<table width="100%">
+    <thead align="left" style="line-height: 50px;">
         <tr>
-            <th><h4>Title<h4><th>
-            <th><h4>Description<h4><th>
-            <th><h4>Due<h4><th>
-            <th><h4>Done<h4><th>
+            <th style="color: red;">Title</th>
+            <th style="color: red;">Description</th>
+            <th style="color: red;">Due</th>
+            <th style="color: red;">Done</th>
         </tr>
     </thead>
 
-    <tbody>
+    <tbody align="left">
     <% @tasks.each do |task| %>
-        <tr>
+        <tr style="line-height: 50px; font-size: 20px">
             <td><%= task.title %></td>
             <td><%= task.description %></td>
             <td><%= task.due %></td>
             <td><%= task.done %></td>
+            <td><%= link_to 'Alterar tarefa', edit_task_path(task) %></td>
+            <td><%= link_to 'Remover tarefa' %></td>
         </tr>
     <% end %>
     </tbody>
 </table>
 
-<h3>
-<%= link_to 'Criar tarefa' %>
-<%= link_to 'Alterar tarefa' %>
-<%= link_to 'Remover tarefa' %>
-<%= link_to 'Consultar tarefa' %>
-<h3>
+<br><br><%= link_to 'Criar tarefa', new_task_path %>
